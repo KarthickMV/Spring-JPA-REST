@@ -1,4 +1,4 @@
-package com.example.demo.user.service;
+package com.example.demo.dbTwo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,13 +15,9 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	public void addUser() {
-		User user = new User();
-		user.setEmail("karthick@gmail.com");
-		user.setUserName("Karthick");
-		user.setId(0);
-		user=userRepository.save(user);
-		System.out.println("Hi there from userService");
+	public User addUser(User user) {
+		user = userRepository.save(user);
+		return user;
 	}
 	
 	public Page<User> fetchAllUsers(Pageable pageable) {
