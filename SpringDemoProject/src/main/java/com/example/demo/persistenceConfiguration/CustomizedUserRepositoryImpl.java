@@ -11,10 +11,6 @@ public class CustomizedUserRepositoryImpl implements CustomizedUserRepository{
 	@Autowired
 	private EntityManager em;
 	
-	@Override
-	public void someUserManipulation(User user) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }

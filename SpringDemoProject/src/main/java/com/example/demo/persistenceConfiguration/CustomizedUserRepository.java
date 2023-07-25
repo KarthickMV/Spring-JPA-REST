@@ -2,7 +2,7 @@ package com.example.demo.persistenceConfiguration;
 
 import com.example.demo.dbTwo.model.User;
 
-public interface CustomizedUserRepository {
+public interface CustomizedUserRepository<T> {
 
-	void someUserManipulation(User user);
+	
 }
